@@ -9,7 +9,7 @@ use opencv::prelude::*;
 
 // 黑色背景白色字体情况下，灰度值：黑 -> 白
 const CHAR_LIST: [char; 8] = [' ', '`', ':', '^', '>', '\\', '?', '@'];
-const GRAY_INTERVAL: f64 = (255 / CHAR_LIST.len()) as f64;
+const GRAY_INTERVAL: f64 = 255_f64 / CHAR_LIST.len() as f64;
 
 /// 将灰度值转换成对应的 ascii
 fn gray_to_ascii(gray: f64) -> char {
